@@ -6,4 +6,4 @@ Flollowing parametrs:
 8-GBRAM
 400-GBSSD
 
-Monitoring will be available on: your ip: 3000
+Monitoring will be available on: IP:3000
