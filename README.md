@@ -20,7 +20,6 @@
     ```
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh ./get-docker.sh
-    
     docker version && docker compose version
     ```
 
@@ -44,13 +43,14 @@
     ```
     echo "#Goerli Alias" >> $HOME/.profile
     echo 'alias geth_log="docker logs goerli-rpc-geth-1 -f"' >> $HOME/.profile
-    echo 'alias lighthouse_logs="docker logs goerli-rpc-lighthouse-1 -f"' >> $HOME/.profile
-    echo 'alias influxdb_logs="docker logs goerli-rpc-influxdb-1 -f"' >> $HOME/.profile
-    echo 'alias prometheus_logs="docker logs goerli-rpc-prometheus-1 -f"' >> $HOME/.profile
-    echo 'alias grafana_logs="docker logs goerli-rpc-grafana-1 -f"' >> $HOME/.profile
+    echo 'alias lighthouse_log="docker logs goerli-rpc-lighthouse-1 -f"' >> $HOME/.profile
+    echo 'alias influxdb_log="docker logs goerli-rpc-influxdb-1 -f"' >> $HOME/.profile
+    echo 'alias prometheus_log="docker logs goerli-rpc-prometheus-1 -f"' >> $HOME/.profile
+    echo 'alias grafana_log="docker logs goerli-rpc-grafana-1 -f"' >> $HOME/.profile
     echo 'alias goerli_log="cd $HOME/goerli-rpc/ && docker compose logs -f"' >> $HOME/.profile
     source $HOME/.profile
     ```
+    now you can simply find logs: geth_log, lighthouse_log, influxdb_log, prometheus_log, grafana_log, and all-in goerli_log 
 
 
 # You are free to make any changes in docker-compose.yml if you know what you do :wink:
