@@ -17,46 +17,40 @@
 
 ## First Step
 - **Install docker and docker compose**
-
-    ***curl -fsSL https://get.docker.com -o get-docker.sh***
-
-    ***sudo sh ./get-docker.sh***
-   
-    ***docker version && docker compose version***
+    ```
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh ./get-docker.sh
+    
+    docker version && docker compose version
+    ```
 
 - **Run Docker as a non-root user**
-
-    ***sudo usermod -aG docker <your_user>***
+    ```
+    sudo usermod -aG docker <your_user>
+    ```
 
 ### Relogin to your server to take effect from usermod !!!
 
 ## Second Step 
 - **Clone this repo to your server, navigate to goerli-rpc folder and spin up all docker containers**
-
-    ***git clone https://github.com/andrii1890/goerli-rpc.git***
-
-    ***cd goerli-rpc***
-
-    ***docker compose up -d***
+    ```
+    git clone https://github.com/andrii1890/goerli-rpc.git
+    cd goerli-rpc
+    docker compose up -d
+    ```
 
 ## Third step
 - **Add alias for docker logs**
-
+    ```
     echo "#Goerli Alias" >> $HOME/.profile
-  
     echo 'alias geth_log="docker logs goerli-rpc-geth-1 -f"' >> $HOME/.profile
-  
     echo 'alias lighthouse_logs="docker logs goerli-rpc-lighthouse-1 -f"' >> $HOME/.profile
-  
     echo 'alias influxdb_logs="docker logs goerli-rpc-influxdb-1 -f"' >> $HOME/.profile
-  
     echo 'alias prometheus_logs="docker logs goerli-rpc-prometheus-1 -f"' >> $HOME/.profile
-  
     echo 'alias grafana_logs="docker logs goerli-rpc-grafana-1 -f"' >> $HOME/.profile
-  
     echo 'alias goerli_log="cd $HOME/goerli-rpc/ && docker compose logs -f"' >> $HOME/.profile
-  
     source $HOME/.profile
+    ```
 
 
 # You are free to make any changes in docker-compose.yml if you know what you do :wink:
