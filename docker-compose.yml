@@ -63,6 +63,7 @@ services:
     ports:
       - ${LIGHTHOUSE_PORT_P2P:-9000}:9000/tcp   # P2P TCP
       - ${LIGHTHOUSE_PORT_P2P:-9000}:9000/udp   # P2P UDP
+      - ${LIGHTHOUSE_HTTP_PORT:-5052}:5052/tcp  # HTTP Port
     command: |
       lighthouse bn
       --network=goerli
