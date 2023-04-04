@@ -30,8 +30,8 @@ services:
       --ws.addr=0.0.0.0
       --ws.port=8546
       --ws.origins="*"
-      --http.api="db,eth,net,engine,rpc,web3"
-      --ws.api="db,eth,net,engine,rpc,txpool,web3"
+      --http.api="admin,debug,web3,eth,txpool,personal,clique,net"
+      --ws.api="admin,debug,web3,eth,txpool,personal,clique,net"
       --authrpc.jwtsecret="/root/jwt/jwt.hex"
       --authrpc.addr=0.0.0.0
       --authrpc.port=8551
