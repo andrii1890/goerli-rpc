@@ -37,6 +37,8 @@ datasources:
   - name: InfluxDB
     type: influxdb
     uid:  influxdb
+    basicAuth: false
+    access: proxy
     database: geth
     user: admin
     url: http://influxdb:8086
@@ -45,3 +47,4 @@ datasources:
     secureJsonData:
       password: admin
     version: 1
+    editable: true
