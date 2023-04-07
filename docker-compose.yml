@@ -132,10 +132,12 @@ services:
     networks: [node]
     volumes:
       - ./grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
-      - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/datasource.yml
+      - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboard.yml
       - ./grafana/grafana.ini:/etc/grafana/grafana.ini:ro
       - ./grafana/dashboards:/etc/dashboards
       - ./data/grafana:/var/lib/grafana
+    environment:
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: "/etc/dashboards/goerli_dashboard.json"
     restart: unless-stopped
   loki:
     image: grafana/loki:2.8.0
