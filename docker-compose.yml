@@ -104,7 +104,7 @@ services:
       - INFLUXDB_ADMIN_USER_PASSWORD=admin
     networks: [node]
     volumes:
-      - ./data/influxdb:/root/.influxdb
+      - ./data/influxdb:/var/lib/influxdb
     restart: unless-stopped
 
   #  
