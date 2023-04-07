@@ -137,6 +137,28 @@ services:
       - ./grafana/dashboards:/etc/dashboards
       - ./data/grafana:/var/lib/grafana
     restart: unless-stopped
-
+  loki:
+    image: grafana/loki:2.8.0
+    hostname: loki
+    ports:
+      - ${LOKI_PORT:-3100}:3100
+    networks: [node]
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/loki-config.yaml
+    command: -config.file=/etc/loki/loki-config.yaml
+    restart: unless-stopped
+  promtail:
+    image: grafana/promtail:2.8.0
+    volumes:
+      - ./promtail/config.yml:/etc/promtail/config.yml
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/log:/var/log:ro
+    command: |
+      --config.file=/etc/promtail/config.yml
+      --config.expand-env=true
+    networks: [node]
+    restart: unless-stopped
+    
 networks:
   node:
