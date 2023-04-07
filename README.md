@@ -55,3 +55,7 @@
 
 # You are free to make any changes in docker-compose.yml if you know what you do :wink:
 
+## If Geth Dashboard doesn't work
+Go to: CONFIGURATION > Data Sources > InfluxDB > Scroll to InfluxDB Details and find Database (it wiil be clear) write: geth > Save & test
+![geth](https://user-images.githubusercontent.com/95629373/230673978-bf5174c0-d652-4306-b0c0-499f3f150778.png)
+
