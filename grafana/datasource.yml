@@ -34,14 +34,15 @@ datasources:
     version: 1
     editable: true
 
-  - name: InfluxDB
+ - name: InfluxDB
     type: influxdb
     uid:  influxdb
-    orgId: 1
-    url: http://influxdb:8086
-    basicAuth: false
     database: geth
     user: admin
-    password: admin
+    url: http://influxdb:8086
+    jsonData:
+      httpMode: GET
+    secureJsonData:
+      password: admin
     version: 1
     editable: true
