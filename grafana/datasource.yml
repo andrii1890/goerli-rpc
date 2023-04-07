@@ -34,7 +34,7 @@ datasources:
     version: 1
     editable: true
 
- - name: InfluxDB
+  - name: InfluxDB
     type: influxdb
     uid:  influxdb
     database: geth
@@ -45,4 +45,3 @@ datasources:
     secureJsonData:
       password: admin
     version: 1
-    editable: true
