@@ -52,6 +52,7 @@
     ```
     now you can simply find logs: geth_log, lighthouse_log, influxdb_log, prometheus_log, grafana_log, and all-in goerli_log 
 ### Also you can find your geth and lighthouse logs in Goerli Dashboard   
+### Understanding Geth's Dashboard https://geth.ethereum.org/docs/monitoring/understanding-dashboards
 
 ### If Geth Dashboard doesn't work
 Go to: CONFIGURATION > Data Sources > InfluxDB > Scroll to InfluxDB Details and find Database (it wiil be clear) write: geth > Save & test
