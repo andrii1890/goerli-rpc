@@ -25,7 +25,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -118,12 +117,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "dark-red",
                   "index": 1,
                   "text": "Inactive"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "dark-green",
                   "index": 0,
                   "text": "Active"
                 }
@@ -135,11 +134,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-green",
                 "value": 80
               }
             ]
@@ -199,11 +198,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": 80
               }
             ]
@@ -276,7 +275,7 @@
               "viz": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -296,11 +295,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": 80
               }
             ]
@@ -393,7 +392,7 @@
               "viz": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -413,11 +412,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": 80
               }
             ]
@@ -814,15 +813,15 @@
             {
               "options": {
                 "Ahead": {
-                  "color": "red",
+                  "color": "dark-red",
                   "index": 2
                 },
                 "Behind": {
-                  "color": "orange",
+                  "color": "dark-orange",
                   "index": 1
                 },
                 "Synced": {
-                  "color": "green",
+                  "color": "dark-green",
                   "index": 0
                 }
               },
@@ -984,12 +983,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "dark-red",
                   "index": 1,
                   "text": "Not Connected"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "dark-green",
                   "index": 0,
                   "text": "Connected"
                 }
@@ -1000,7 +999,7 @@
               "options": {
                 "match": "null",
                 "result": {
-                  "color": "orange",
+                  "color": "dark-orange",
                   "index": 2,
                   "text": "Unknown"
                 }
@@ -1011,7 +1010,7 @@
               "options": {
                 "match": "empty",
                 "result": {
-                  "color": "red",
+                  "color": "dark-red",
                   "index": 3,
                   "text": "Not Connected"
                 }
@@ -1025,11 +1024,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": 80
               }
             ]
@@ -1091,12 +1090,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "dark-red",
                   "index": 1,
                   "text": "Not Synced"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "dark-green",
                   "index": 0,
                   "text": "Synced"
                 }
@@ -1109,11 +1108,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-red",
                 "value": 80
               }
             ]
@@ -1263,6 +1262,6 @@
   "timezone": "",
   "title": "Goerli Dashboard",
   "uid": "singlenode",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
