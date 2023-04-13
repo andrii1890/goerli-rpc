@@ -1,7 +1,7 @@
 # ETH RPC node on Goerli network
- ***HTTP*** request will be available on: <YOUR_IP>:8545
+ ***HTTP*** request will be available on: ***http://<YOUR_IP>:8545***
  
-  ***WS*** request will be available on: <YOUR_IP>:8546
+  ***WS*** request will be available on: ***ws://<YOUR_IP>:8546***
  
  Monitoring will be available without credentials on: <YOUR_IP>:3000
  
