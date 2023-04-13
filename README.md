@@ -3,7 +3,7 @@
  
   ***WS*** request will be available on: ***ws://<YOUR_IP>:8546***
  
- Monitoring will be available without credentials on: <YOUR_IP>:3000
+ Monitoring will be available without credentials on: ***http://<YOUR_IP>:3000***
  
  Grafana has 3 dashboard: geth dashboard, lighthouse dashboard, and goerli dashboard (last simple all-in)
 
