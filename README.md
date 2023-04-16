@@ -16,6 +16,14 @@
 - 400-GBSSD
 
 ## First Step
+- **Update packages**
+    ```
+    sudo apt update && sudo apt upgrade -y
+    ```
+- **Install dependencies**
+     ```
+     sudo apt install curl build-essential git wget jq make gcc tmux -y
+     ```
 - **Install docker and docker compose**
     ```
     curl -fsSL https://get.docker.com -o get-docker.sh
