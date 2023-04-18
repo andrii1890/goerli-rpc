@@ -25,6 +25,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -494,21 +495,31 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "syncing"
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "dark-green",
                 "value": 80
               }
             ]
-          },
-          "unit": "locale"
+          }
         },
         "overrides": []
       },
@@ -518,10 +529,10 @@
         "x": 0,
         "y": 5
       },
-      "id": 82,
+      "id": 92,
       "options": {
-        "colorMode": "none",
-        "graphMode": "none",
+        "colorMode": "value",
+        "graphMode": "area",
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
@@ -540,11 +551,16 @@
             "type": "prometheus",
             "uid": "prometheus"
           },
-          "expr": "chain_head_header",
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "chain_head_block{job=\"geth\"}",
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
           "refId": "A"
         }
       ],
-      "title": "Latest Chain Header",
+      "title": "Current Block",
       "type": "stat"
     },
     {
@@ -1262,6 +1278,6 @@
   "timezone": "",
   "title": "Goerli Dashboard",
   "uid": "singlenode",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
