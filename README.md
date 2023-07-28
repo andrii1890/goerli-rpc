@@ -66,5 +66,43 @@
 Go to: CONFIGURATION > Data Sources > InfluxDB > Scroll to InfluxDB Details and find Database (it wiil be clear) write: geth > Save & test
 ![geth](https://user-images.githubusercontent.com/95629373/230673978-bf5174c0-d652-4306-b0c0-499f3f150778.png)
 
+If you want to enable password entry, just delete previous grafana folder and modify grafana.ini 
+```
+cd ~/goerli-rpc/data/ && sudo rm -rf grafana
+```
+```
+cat /dev/null > ~/goerli-rpc/grafana/grafana.ini && nano ~/goerli-rpc/grafana/grafana.ini
+```
+
+and paste this
+
+```
+[auth.anonymous]
+enabled = false
+org_role = Admin
+
+# specify role for unauthenticated users
+# org_role = Viewer
+
+[auth.basic]
+enabled = true
+
+[security]
+# disable creation of admin user on first start of grafana
+disable_initial_admin_creation = false
+
+# default admin user, created on startup
+admin_user = admin
+
+# default admin password, can be changed before first start of grafana,  or in profile settings
+admin_password = admin
+
+# used for signing
+secret_key = SW2YcwTIb9zpOOhoPsMm
+
+# current key provider used for envelope encryption, default to static value specified by secret_key
+encryption_provider = secretKey.v1
+```
+
 # You are free to make any changes in docker-compose.yml if you know what you do :wink:
 
