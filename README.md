@@ -13,7 +13,7 @@
 ## Following parameters:
 - 4-CPU
 - 8-GBRAM
-- 500-GBSSD
+- 600-GBSSD
 
 ## First Step
 - **Update packages**
