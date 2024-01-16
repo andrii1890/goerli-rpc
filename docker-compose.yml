@@ -14,7 +14,7 @@ services:
   #░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝
 
   geth:
-    image: ethereum/client-go:${GETH_VERSION:-v1.13.5}
+    image: ethereum/client-go:${GETH_VERSION:-v1.13.10}
     ports:
       - ${GETH_PORT_P2P:-30303}:30303/tcp # P2P TCP
       - ${GETH_PORT_P2P:-30303}:30303/udp # P2P UDP
@@ -59,7 +59,7 @@ services:
   # 
 
   lighthouse:
-    image: sigp/lighthouse:${LIGHTHOUSE_VERSION:-v4.5.0}
+    image: sigp/lighthouse:${LIGHTHOUSE_VERSION:-v4.6.0-rc.0}
     ports:
       - ${LIGHTHOUSE_PORT_P2P:-9000}:9000/tcp   # P2P TCP
       - ${LIGHTHOUSE_PORT_P2P:-9000}:9000/udp   # P2P UDP
